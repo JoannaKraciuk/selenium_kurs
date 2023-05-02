@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 class SearchResultsPage:
 
     def __init__(self, driver):
@@ -14,8 +14,6 @@ class SearchResultsPage:
         self.driver.find_element_by_xpath(self.hotel_prices_xpath)
         return [price.get_attribute("textContent")for price in prices]
 
-
-=======
 class SearchResultPage:
     def __init__(self, driver):
         self.driver = driver
@@ -29,4 +27,3 @@ class SearchResultPage:
     def get_hotel_prices(self):
         prices = self.driver.find_elements_by_xpath(self.hotel_prices_xpath)
         return [price.get_attribute("textContent")for price in prices]
->>>>>>> origin/master
