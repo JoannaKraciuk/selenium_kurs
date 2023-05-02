@@ -1,6 +1,6 @@
 class SearchHotelPage:
 
-    def __init__(self,driver):
+    def __init__(self, driver):
         self.driver = driver
         self.search_hotel_span_xpath = "//span[text()='Search by Hotel or City Name']"
         self.search_hotel_input_xpath = "//div[@id='select2-drop']//input"
@@ -10,7 +10,7 @@ class SearchHotelPage:
         self.travelers_input_id = "travelersInput"
         self.adult_input_id = "adultInput"
         self.child_input_id = "childInput"
-        self.search_button_xpath = "//button[text()=' Search']"
+        self.search_button_xpath = "//button[text()='Search']"
 
     def set_city(self, city):
         self.driver.find_element_by_xpath(self.search_hotel_span_xpath).click()
