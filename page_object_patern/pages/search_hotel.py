@@ -29,17 +29,8 @@ class SearchHotelPage:
         self.driver.find_element_by_id(self.adult_input_id).send_keys(adults)
         self.driver.find_element_by_id(self.child_input_id).clean()
         self.driver.find_element_by_id(self.child_input_id).send_keys(child)
-        self.
+
+    def perfom_search(self):
+        self.driver.find_element_by_xpath(self.search_button_xpath).click()
 
 
-        driver.find_element_by_xpath("//span[text()='Search by Hotel or City Name']").click()
-        driver.find_element_by_xpath("//div[@id='select2-drop']//input").send_keys("Dubai")
-        driver.find_element_by_xpath("//span[text()='Dubai']").click()
-        driver.find_element_by_name("checkin").send_keys("01/05/2023")
-        driver.find_element_by_name("checkout").send_keys("06/05/2023")
-        driver.find_element_by_id("travellersInput").click()
-        driver.find_element_by_id("adultInput").clear()
-        driver.find_element_by_id("adultInput").send_keys("3")
-        driver.find_element_by_id("childInput").clear()
-        driver.find_element_by_id("childInput").send_keys("3")
-        driver.find_element_by_xpath("//button[text()=' Search']").click()
