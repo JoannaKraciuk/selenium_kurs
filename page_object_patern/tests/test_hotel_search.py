@@ -22,7 +22,6 @@ class TestHotelSearch:
         search_hotel_page.set_date_range("01/05/2023", "06/05/2023")
         search_hotel_page.set_travellers("2", "2")
         search_hotel_page.perform_search()
-
         results_page = SearchResultsPage(self.driver)
         hotel_names = results_page.get_hotel_names()
         price_values = results_page.get_hotel_prices()
