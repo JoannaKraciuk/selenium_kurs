@@ -1,19 +1,20 @@
 import logging
 
+from page_object_patern.locators.locators import SearchHotelLocators
 class SearchHotelPage:
 
     def __init__(self, driver):
         self.driver = driver
         self.logger = logging.getLogger(__name__)
-        self.search_hotel_span_xpath = "//span[text()='Search by Hotel or City Name']"
-        self.search_hotel_input_xpath = "//div[@id='select2-drop']//input"
-        self.location_match_span_xpath = "//span[text()='Dubai']"
-        self.check_in_input_name = "checkin"
-        self.check_out_input_name = "checkout"
-        self.travellers_input_id = "travellersInput"
-        self.adult_input_id = "adultInput"
-        self.child_input_id = "childInput"
-        self.search_button_xpath = "//button[text()=' Search']"
+        self.search_hotel_span_xpath = SearchHotelLocators.search_hotel_span_xpath
+        self.search_hotel_input_xpath = SearchHotelLocators.search_hotel_input_xpath
+        self.location_match_span_xpath = SearchHotelLocators.location_match_span_xpath
+        self.check_in_input_name = SearchHotelLocators.check_in_input_name
+        self.check_out_input_name = SearchHotelLocators.check_out_input_name
+        self.travellers_input_id = SearchHotelLocators.travellers_input_id
+        self.adult_input_id = SearchHotelLocators.adult_input_id
+        self.child_input_id = SearchHotelLocators.child_input_id
+        self.search_button_xpath = SearchHotelLocators.search_button_xpath
 
     def set_city(self, city):
         self.logger.info("Setting city {}".format(city))
