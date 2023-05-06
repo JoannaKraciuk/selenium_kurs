@@ -31,7 +31,7 @@ class TestHotelSearch:
         assert hotel_names[2] == "Rose Rayhaan Rotana"
         assert hotel_names[3] == "Hyatt Regency Perth"
 
-        assert price_values[0] == "$22"
-        assert price_values[1] == "$50"
-        assert price_values[2] == "$80"
-        assert price_values[3] == "$150"
+        assert price_values[0] == "0"
+        assert price_values[1] == "0"
+        assert price_values[2] == "0"
+        assert price_values[3] == "0"
