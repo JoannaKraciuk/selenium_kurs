@@ -1,7 +1,10 @@
 import logging
+import allure
+from allure_commons.types import AttachmentType
 
 from page_object_patern.locators.locators import SearchHotelLocators
 class SearchHotelPage:
+
 
     def __init__(self, driver):
         self.driver = driver
@@ -16,24 +19,31 @@ class SearchHotelPage:
         self.child_input_id = SearchHotelLocators.child_input_id
         self.search_button_xpath = SearchHotelLocators.search_button_xpath
 
+
+    @allure.step("Setting city name to'(1)'")
     def set_city(self, city):
         self.logger.info("Setting city {}".format(city))
         self.driver.find_element_by_xpath(self.search_hotel_span_xpath).click()
         self.driver.find_element_by_xpath(self.search_hotel_input_xpath).send_keys(city)
         self.driver.find_element_by_xpath(self.location_match_span_xpath).click()
+        allure.attach(self.driver.get_screenshot_as_png(), name="Set city", attachment_type=AttachmentType.PNG)
 
+    @allure.step("Setting date range from '(1)' to '(2)'")
     def set_date_range(self, check_in, check_out):
         self.logger.info("Setting check in {checkin} and {checkout} dates.".format(checkin=check_in, checkout=check_out))
         self.driver.find_element_by_name(self.check_in_input_name).send_keys(check_in)
         self.driver.find_element_by_name(self.check_out_input_name).send_keys(check_out)
+        allure.attach(self.driver.get_screenshot_as_png(), name="Set date range", attachment_type=AttachmentType.PNG)
 
+    @allure.step("Setting trevellres - adults '(1)' and kids '(2)'")
     def set_travellers(self, adults, child):
-        self.logger.info("Setting travellers {adults} and {kids} dates".format(adults=adults, kids=child))
+        self.logger.info("Setting travellers {adults} and {kids}".format(adults=adults, kids=child))
         self.driver.find_element_by_id(self.travellers_input_id).click()
         self.driver.find_element_by_id(self.adult_input_id).clear()
         self.driver.find_element_by_id(self.adult_input_id).send_keys(adults)
         self.driver.find_element_by_id(self.child_input_id).clear()
         self.driver.find_element_by_id(self.child_input_id).send_keys(child)
+        allure.attach(self.driver.get_screenshot_as_png(), name="Set travellers", attachment_type=AttachmentType.PNG)
 
     def perform_search(self):
         self.logger.info("Performing search")
