@@ -10,7 +10,7 @@ During the course, I gained knowledge on:
 ####  - Page Object Model
 #### -  Allure
 
-[Link to the first application tests](page_object_patern)
+🔗[Link to the first application](page_object_patern)
 
 
 The next step will be to develop it by adding new tests and reports. 
