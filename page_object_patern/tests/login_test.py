@@ -1,6 +1,6 @@
 import pytest
 
-from pages.my_account_page import MyAccountPage
+from page_object_patern.pages.my_account_page import MyAccountPage
 
 
 @pytest.mark.usefixtures("setup")
