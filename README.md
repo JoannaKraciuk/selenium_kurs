@@ -10,7 +10,7 @@ During the course, I gained knowledge on:
 ####  - Page Object Model
 #### -  Allure
 
-🔗[Link to the first application](page_object_patern)
+🔗[Link to the first application](https://github.com/JoannaKraciuk/selenium_kurs/tree/f3f749ec58e2289341ae855e54dd8b14cc979b79/page_object_patern)
 
 🔗[Link to second application](https://github.com/JoannaKraciuk/selenium_kurs/tree/1da790639c549cf35d010f34e52436636817e258/page_object_patern)
 
