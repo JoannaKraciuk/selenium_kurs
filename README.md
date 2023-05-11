@@ -1,4 +1,4 @@
-📖# selenium_kurs
+📖 # selenium_kurs
 
 ### This repository was entirely created during the Selenium Python from scratch course. 
 During the course, I gained knowledge on:
