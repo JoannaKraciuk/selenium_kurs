@@ -1,5 +1,5 @@
 from selenium.webdriver.common.keys import Keys
-from locators import locators
+from page_object_patern.locators import locators
 
 
 class MyAccountPage:
