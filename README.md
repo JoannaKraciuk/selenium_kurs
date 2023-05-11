@@ -12,7 +12,7 @@ During the course, I gained knowledge on:
 
 🔗[Link to the first application](page_object_patern)
 
-🔗[Link to second application](page_object_patern)
+🔗[Link to second application](https://github.com/JoannaKraciuk/selenium_kurs/tree/1da790639c549cf35d010f34e52436636817e258/page_object_patern)
 
 
 The next step will be to develop it by adding new tests and reports. 
