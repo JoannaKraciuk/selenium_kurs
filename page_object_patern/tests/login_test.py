@@ -1,11 +1,13 @@
+import allure
 import pytest
-
 from page_object_patern.pages.my_account_page import MyAccountPage
 
 
 @pytest.mark.usefixtures("setup")
 class TestLogIn:
 
+    @allure.title("Login test")
+    @allure.description("This test execute log in with valid data")
     def test_log_in_passed(self):
         my_account_page = MyAccountPage(self.driver)
         my_account_page.open_page()
@@ -13,6 +15,7 @@ class TestLogIn:
 
         assert my_account_page.is_logout_link_displayed()
 
+    @allure.description("This test execute log in with invalid data")
     def test_log_in_failed(self):
         my_account_page = MyAccountPage(self.driver)
         my_account_page.open_page()
