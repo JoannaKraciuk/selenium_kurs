@@ -1,7 +1,7 @@
 import random
 
+import allure
 import pytest
-
 from page_object_patern.pages.billing_address_page import BillingAddressPage
 from page_object_patern.pages.my_account_page import MyAccountPage
 
@@ -9,6 +9,8 @@ from page_object_patern.pages.my_account_page import MyAccountPage
 @pytest.mark.usefixtures("setup")
 class TestUpdateBillingAddress:
 
+    @allure.title("Update billing address")
+    @allure.description("This test execute update billing address page with valid data")
     def test_update_billing_address(self):
         email = str(random.randint(0, 10000)) + "sialalala@gmail.com"
         my_account_page = MyAccountPage(self.driver)
