@@ -28,3 +28,12 @@ class MyAccountPage:
     my_account_link = (By.XPATH, "//li[@id='menu-item-22']//a")
     logout_link = (By.LINK_TEXT, "Logout")
     error_msg = (By.XPATH, "//ul[@class='woocommerce-error']//li")
+
+class ShopPage:
+
+    shop_button = (By.XPATH, "//li[@id='menu-item-21']//span")
+    add_to_cart_button = (By.LINK_TEXT, "Add to cart")
+    view_cart = (By.XPATH, "//div[@id='content']//a[3]")
+    proceed_to_checkout = (By.LINK_TEXT, "Proceed to checkout")
+    billing_first_name = (By.ID, "billing_first_name")
+    billing_last_name = (By.ID, "billing_last_name")
