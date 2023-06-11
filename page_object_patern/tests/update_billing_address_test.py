@@ -1,5 +1,4 @@
 import random
-
 import allure
 import pytest
 from page_object_patern.pages.billing_address_page import BillingAddressPage

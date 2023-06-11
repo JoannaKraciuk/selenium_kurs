@@ -1,0 +1,3 @@
+
+Checking for win32 chromedriver:113.0.5672.63 in cache
+Driver found in C:\Users\valcr\.wdm\chromedriver\113.0.5672.63\win32/chromedriver.exe
