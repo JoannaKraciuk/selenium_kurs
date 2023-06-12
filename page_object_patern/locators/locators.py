@@ -37,3 +37,11 @@ class ShopPage:
     proceed_to_checkout = (By.LINK_TEXT, "Proceed to checkout")
     billing_first_name = (By.ID, "billing_first_name")
     billing_last_name = (By.ID, "billing_last_name")
+    billing_address = (By.ID, "billing_address_1")
+    billing_postcode = (By.ID, "billing_postcode")
+    billing_city = (By.ID, "billing_city")
+    billing_phone = (By.ID, "billing_phone")
+    billing_email = (By.ID, "billing_email")
+    place_order = (By.ID, "place_order")
+
+
